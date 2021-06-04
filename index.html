@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"/>
+   <meta name="viewPort"content="Width=device-width,initial-scale=1.0"/>
+   <link rel="stylesheet"href="style.css"/>
+   <title>Password Generator</title>
+</head>
+<body>
+    <div class="Container">
+       <div class="heading">Generate Password</div>
+       <input type="text"placeholder="password Here."class="input"id="input">
+       <button class="generate" onclick="generate()">Generate Password</button>
+     </div>
+     <script>
+        function generate(){
+     var charset=
+              "012345656abcdefghthjkjyujjABHRTYUIUNDR!@#$%*()_+?><"{}[]""
+     var passwordLength=16;
+     var password="";
+     for(var i=0;i<passwordLength;i++){
+          var randomnum=Math.floor(Math.random[]*charset.length);
+          password += charset.substring(randomnum,randomnum+1);
+     }
+     document.getElementById("input").value=password;
+   }
+     </script>
+</body>
+</html>
